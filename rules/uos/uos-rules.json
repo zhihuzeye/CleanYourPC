@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "DOM-UOS-001",
+    "Name": "清理统信 UOS 用户自启动推广与无效启动脚本",
+    "Category": "国产系统自启治理",
+    "Scope": "UOS",
+    "SupportedOS": ["统信 UOS"],
+    "TargetSoftware": "UOS Desktop Autostart",
+    "VersionRange": "*",
+    "Risk": "AutoSafe",
+    "RequiresAdmin": false,
+    "RequiresUserConfirm": false,
+    "SupportsRestore": true,
+    "SourceAndVerification": "扫描并清理 ~/.config/autostart 目录下失效的广告推广 .desktop 文件",
+    "ActionType": "RemoveResidualDirectory",
+    "TargetPath": "~/.config/autostart",
+    "ValueName": "DesktopEntry",
+    "ExpectedCleanValue": "Clean",
+    "ValueKind": "String",
+    "SuccessCriteria": "自启动目录下无无效推广项"
+  },
+  {
+    "Id": "DOM-UOS-002",
+    "Name": "关闭统信 UOS 桌面应用商店热点推荐通知",
+    "Category": "国产系统应用治理",
+    "Scope": "UOS",
+    "SupportedOS": ["统信 UOS"],
+    "TargetSoftware": "UOS AppStore",
+    "VersionRange": "*",
+    "Risk": "AutoSafe",
+    "RequiresAdmin": false,
+    "RequiresUserConfirm": false,
+    "SupportsRestore": true,
+    "SourceAndVerification": "配置 ~/.config/deepin/appstore.ini 停用活动弹窗推送",
+    "ActionType": "RegistryValue",
+    "TargetPath": "~/.config/deepin/appstore.ini",
+    "ValueName": "DisablePromoNotifications",
+    "ExpectedCleanValue": "1",
+    "ValueKind": "String",
+    "SuccessCriteria": "配置值等于 1"
+  }
+]

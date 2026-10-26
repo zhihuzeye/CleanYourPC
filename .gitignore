@@ -1,0 +1,51 @@
+## Build Results & Outputs
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+publish/
+publish-*/
+
+## Visual Studio & Rider & VS Code
+.vs/
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.userprefs
+*.pidb
+*.booproj
+
+## Test & Coverage Results
+TestResults/
+[Cc]overage/
+*.coverage
+*.coveragexml
+
+## Runtime Diagnostic & Log Files
+*.log
+log.txt
+error.txt
+*.txt.bak
+*.bak
+
+## OS Generated Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+[Dd]esktop.ini
+
+## Package & Tool Caches
+*.nupkg
+.nuget/
+*.lock.json
+project.lock.json

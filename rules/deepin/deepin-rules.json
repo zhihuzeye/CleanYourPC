@@ -1,0 +1,22 @@
+[
+  {
+    "Id": "DOM-DEEPIN-001",
+    "Name": "清理深度 Deepin 桌面 autostart 无效自启动与第三方推广项",
+    "Category": "国产系统自启治理",
+    "Scope": "Deepin",
+    "SupportedOS": ["深度 Deepin"],
+    "TargetSoftware": "Deepin Autostart",
+    "VersionRange": "*",
+    "Risk": "AutoSafe",
+    "RequiresAdmin": false,
+    "RequiresUserConfirm": false,
+    "SupportsRestore": true,
+    "SourceAndVerification": "排查并清理 ~/.config/autostart 遗留的已卸载软件自启动残留",
+    "ActionType": "RemoveResidualDirectory",
+    "TargetPath": "~/.config/autostart",
+    "ValueName": "DesktopEntry",
+    "ExpectedCleanValue": "Clean",
+    "ValueKind": "String",
+    "SuccessCriteria": "自启动目录下无无效推广项"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "DOM-KYLIN-001",
+    "Name": "关闭银河麒麟桌面应用中心开屏资讯推荐服务",
+    "Category": "国产系统应用治理",
+    "Scope": "Kylin",
+    "SupportedOS": ["银河麒麟"],
+    "TargetSoftware": "Kylin AppStore",
+    "VersionRange": "*",
+    "Risk": "AutoSafe",
+    "RequiresAdmin": false,
+    "RequiresUserConfirm": false,
+    "SupportsRestore": true,
+    "SourceAndVerification": "关闭银河麒麟应用商店后台每日资讯推送配置",
+    "ActionType": "RegistryValue",
+    "TargetPath": "~/.config/kylin-appstore/config.ini",
+    "ValueName": "EnablePromoNews",
+    "ExpectedCleanValue": "0",
+    "ValueKind": "String",
+    "SuccessCriteria": "配置文件设为 0"
+  },
+  {
+    "Id": "DOM-KYLIN-002",
+    "Name": "清理银河麒麟桌面 UKUI 软件更新弹窗后台自启守护项",
+    "Category": "国产系统自启治理",
+    "Scope": "Kylin",
+    "SupportedOS": ["银河麒麟"],
+    "TargetSoftware": "UKUI Promo Helper",
+    "VersionRange": "*",
+    "Risk": "AutoSafe",
+    "RequiresAdmin": false,
+    "RequiresUserConfirm": false,
+    "SupportsRestore": true,
+    "SourceAndVerification": "扫描并清理 UKUI 桌面环境下无用推广自启动助手",
+    "ActionType": "RemoveResidualDirectory",
+    "TargetPath": "~/.config/autostart/ukui-promo.desktop",
+    "ValueName": "DesktopEntry",
+    "ExpectedCleanValue": "Clean",
+    "ValueKind": "String",
+    "SuccessCriteria": "对应桌面自启动项已移除"
+  }
+]

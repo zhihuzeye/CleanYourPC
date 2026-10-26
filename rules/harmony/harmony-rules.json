@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "DOM-HARMONY-001",
+    "Name": "治理华为鸿蒙电脑端设备互联与后台开机推送建议",
+    "Category": "国产系统组件治理",
+    "Scope": "HarmonyOS",
+    "SupportedOS": ["华为鸿蒙"],
+    "TargetSoftware": "Huawei PC Manager",
+    "VersionRange": "*",
+    "Risk": "AutoSafe",
+    "RequiresAdmin": false,
+    "RequiresUserConfirm": false,
+    "SupportsRestore": true,
+    "SourceAndVerification": "关闭华为 PC 智慧互联弹出的服务推荐与发现提醒卡片",
+    "ActionType": "RegistryValue",
+    "TargetPath": "HKCU\\Software\\Huawei\\PCManager",
+    "ValueName": "ShowDiscoveryTips",
+    "ExpectedCleanValue": "0",
+    "ValueKind": "DWord",
+    "SuccessCriteria": "配置值等于 0"
+  },
+  {
+    "Id": "DOM-HARMONY-002",
+    "Name": "关闭华为电脑管家热点资讯与服务推荐弹窗",
+    "Category": "国产系统组件治理",
+    "Scope": "HarmonyOS",
+    "SupportedOS": ["华为鸿蒙"],
+    "TargetSoftware": "Huawei PC Manager",
+    "VersionRange": "*",
+    "Risk": "AutoSafe",
+    "RequiresAdmin": false,
+    "RequiresUserConfirm": false,
+    "SupportsRestore": true,
+    "SourceAndVerification": "关闭华为电脑管家设置中的推广与资讯推送项",
+    "ActionType": "RegistryValue",
+    "TargetPath": "HKCU\\Software\\Huawei\\PCManager",
+    "ValueName": "EnablePromoPopup",
+    "ExpectedCleanValue": "0",
+    "ValueKind": "DWord",
+    "SuccessCriteria": "配置值等于 0"
+  }
+]
